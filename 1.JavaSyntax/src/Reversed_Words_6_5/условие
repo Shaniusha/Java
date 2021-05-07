@@ -1,0 +1,13 @@
+Complete the solution so that it reverses all of the words within the string passed in.
+
+Example:
+
+"The greatest victory is that which requires no battle" -->
+ "battle no requires which that is victory greatest The"
+ --------------------------------------------------------
+ Завершите решение, чтобы оно перевернуло все слова в переданной строке.
+
+ Пример:
+
+ «Величайшая победа - это та, которая не требует битвы» -
+  « битвы требует Не, которая та это победа Величайшая»

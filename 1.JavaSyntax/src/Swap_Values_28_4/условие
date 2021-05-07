@@ -1,0 +1,9 @@
+I would like to be able to pass an array with two elements to my swapValues function to swap the values.
+ However it appears that the values aren't changing.
+
+Can you figure out what's wrong here?
+-------------------------------------------
+Я хотел бы передать массив с двумя элементами в мою функцию swapValues, чтобы поменять местами значения.
+Однако похоже, что значения не меняются.
+
+Вы можете понять, что здесь не так?

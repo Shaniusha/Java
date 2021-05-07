@@ -1,0 +1,15 @@
+Create a function that gives a personalized greeting. This function takes two parameters: name and owner.
+
+Use conditionals to return the proper message:
+
+case	return
+name equals owner	'Hello boss'
+otherwise	'Hello guest'
+------------------------------------------------
+Создайте функцию, которая дает индивидуальное приветствие. Эта функция принимает два параметра: имя и владелец.
+
+Используйте условные выражения, чтобы вернуть правильное сообщение:
+
+возврат дела
+имя равно владельцу "Привет, босс"
+иначе "Привет, гость"

@@ -16,5 +16,6 @@ public class Calculate {
          int[] arr = new int[]{1,2,3};
          double s = find_average(arr);
          System.out.println(s);
+         System.out.println("I love my mom :)");
     }
 }

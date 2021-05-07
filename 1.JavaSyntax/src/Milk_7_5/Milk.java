@@ -11,8 +11,8 @@ public class Milk {
     }
     public static void main(String[] args) {
       int day = 6;
-      int milk = 3;
+      int milk = 10;
       System.out.println( milk(day) + " bottels  za " + day + " days");
-      System.out.println("za " + milk(milk)+ " days " + milk + " bottels" );
+      System.out.println("za " + bootel(milk)+ " days " + milk + " bottels" );
     }
 }

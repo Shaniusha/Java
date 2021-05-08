@@ -10,7 +10,7 @@ public class Milk {
         return days;
     }
     public static void main(String[] args) {
-      int day = 6;
+      int day = 7;
       int milk = 10;
       System.out.println( milk(day) + " bottels  za " + day + " days");
       System.out.println("za " + bootel(milk)+ " days " + milk + " bottels" );

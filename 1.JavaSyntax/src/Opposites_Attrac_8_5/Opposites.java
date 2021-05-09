@@ -14,10 +14,10 @@ public class Opposites {
        int[]odd = {11,13};
        int[]even = {10,12};
        
-       System.out.println(isLove(odd[0],even[0]));
-       System.out.println(isLove(odd[1],even[1]));
-       System.out.println(isLove(even[0],even[1]));
-       System.out.println(isLove(odd[0],odd[0]));
+       System.out.println(isLove(odd[0],even[0]));// 11,10
+       System.out.println(isLove(odd[1],even[1]));//13,12
+       System.out.println(isLove(even[0],even[1]));//10,12
+       System.out.println(isLove(odd[0],odd[1]));  //11,13
     }
 
 }

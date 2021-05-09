@@ -11,8 +11,6 @@ public class Counting {
         return counter;
     }
 
-
-
         public static void main (String[]args){
             Boolean[] array1 = {true,  true,  true,  false,
                     true,  true,  true,  true ,
@@ -22,7 +20,5 @@ public class Counting {
                     false, false, true,  true,
                     true,  true,  true,  true };
             System.out.println(countSheeps(array1));
-
         }
     }
-

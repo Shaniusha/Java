@@ -1,0 +1,17 @@
+Complete the function that takes two integers (a, b, where a < b) and return an array of all
+integers between the input parameters, including them.
+
+For example:
+
+a = 1
+b = 4
+--> [1, 2, 3, 4]
+----------------------------------------
+Завершите функцию, которая принимает два целых числа (a, b, где a < b) и возвращает массив всех
+ целых чисел между входными параметрами, включая их.
+
+Например:
+
+а = 1
+б = 4
+-> [1, 2, 3, 4]

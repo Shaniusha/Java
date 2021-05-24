@@ -1,0 +1,10 @@
+Every day you rent the car costs $40. If you rent the car for 7 or more days, you get $50 off your total.
+ Alternatively, if you rent the car for 3 or more days, you get $20 off your total.
+
+Write a code that gives out the total amount for different days(d).
+------------------------------------------------
+Ежедневная аренда машины стоит 40 долларов. Если вы арендуете машину на 7 или более дней,
+ вы получите скидку 50 долларов. В качестве альтернативы, если вы арендуете машину на 3 или более дней,
+  вы получите скидку 20 долларов.
+
+Напишите код, который выдаст общую сумму за разные дни (d).

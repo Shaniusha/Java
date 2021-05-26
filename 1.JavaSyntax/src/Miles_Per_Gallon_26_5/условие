@@ -1,0 +1,24 @@
+Sometimes, I want to quickly be able to convert miles per imperial gallon into kilometers
+ per liter.
+
+Create an application that will display the number of kilometers per liter (output) based
+ on the number of miles per imperial gallon (input).
+
+Make sure to round off the result to two decimal points. If the answer ends with a 0,
+ it should be rounded off without the 0. So instead of 5.50, we should get 5.5.
+
+Some useful associations relevant to this kata: 1 Imperial Gallon = 4.54609188
+litres 1 Mile = 1.609344 kilometres
+--------------------------------------------
+Иногда мне нужно быстро преобразовать мили на британский галлон в километры на литр.
+
+Создайте приложение, которое будет отображать количество километров на литр (вывод)
+ на основе количества миль на британский галлон (ввод).
+
+Обязательно округлите результат до двух десятичных знаков. Если ответ заканчивается
+ на 0, его следует округлить без 0. Таким образом, вместо 5,50 мы должны получить 5,5.
+
+Некоторые полезные ассоциации, относящиеся к этому ката:
+ 1 британский галлон = 4,54609188 литров 1 миля = 1,609344 километра
+
+АЛГОРИТМЫ

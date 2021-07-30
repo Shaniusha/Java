@@ -2,11 +2,14 @@ package Tasks_11_07_2021;
 
 import java.time.*;
 import java.time.format.DateTimeFormatter;
+import java.time.format.DateTimeParseException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
 
 public class App {
+
     public static void main(String[] args) {
         LocalDate d1 = LocalDate.of(2021,7,5);
         LocalDate d2 = LocalDate.of(2021,8,1);
@@ -115,7 +118,6 @@ public class App {
         //catch – определяет блок кода, в котором происходит обработка исключения;
         //finally – определяет блок кода, который является необязательным, но при его
                    //наличии выполняется в любом случае независимо от результатов выполнения блока try.
-
         // Специальные обрабатывающие конструкции: try{}catch, try{}catch{}finally,try{}finally{}.
 
         //в блок try заключаем код, в котором может произойти исключение//«ограждаем» опасные участки кода
@@ -123,13 +125,82 @@ public class App {
         // в данном в методе parse() класса LocalTime может выбросить исключение написание часов(33)
 
         try {
-            LocalTime.parse("33:30:20");
+            String s = null;
+           // s.toUpperCase(Locale.ROOT);
+            LocalTime.parse("13:30:20");
             // в блок  catch заключаем код по обработке исключения Exception
             // предусматриваем «запасные» пути с помощью блока catch{}
+        }catch (DateTimeParseException dte){
+            System.out.println("неправильное время");
         }catch (Exception e){
-            System.out.println(e.getMessage());
+            System.out.println(e.getMessage() + " другая ошибка");
 
             // в блоке finally{} мы пишем код, который выполняется в программе при любом исходе.
+        }finally{
+            System.out.println("это запускается в конце");
         }
+
+        try {
+            System.out.println(App.parseTime("25:25:25"));
+        }
+        catch (DateTimeParseException dte1){
+            System.out.println("я обрабатываю ошибку которая в методе parseTime");
+        }
+                                       // д.з
+        int year = 1940, month = 6, day = 21, hour = 6, minute = 0, second = 0;
+
+        try {// этот код может выбрасить исключение
+            MyExc.my_LocalDateTime(year, month, day, hour, minute, second);//вызываю метод my_LocalDateTime,который
+            //находится в классе MyExc
+        }
+        catch(MyExc.YearExec e){//ловит исключение YearExe
+            System.out.println("год меньше или равен 1940");
+        }
+        catch(MyExc.MonthExec e){
+            System.out.println("месяц меньше июня");//ловит исключение MonthExec
+        }
+        catch(MyExc.DayExec e){
+            System.out.println("день меньше 21");//ловит исключение DayExec
+        }
+
+
+        int year1 = 1945, month1 = 5, day1 = 19;
+        try {
+            MyExc.my_LocalDateTime(year1, month1, day1);
+        }
+        catch(MyExc.YearExec e){//ловит исключение YearExe
+            System.out.println("год больше или равен 1945");
+        }
+        catch(MyExc.MonthExec e){
+            System.out.println("месяц больше мая");//ловит исключение MonthExec
+        }
+        catch(MyExc.DayExec e) {
+            System.out.println("день больше 9");//ловит исключение DayExec
+        }
+
+
+        year = 2085; month = 10; day = 32; hour = 16; minute = 40; second = 50;
+        try{
+            LocalDateTime dateTime6 = LocalDateTime.of(year, month, day, hour, minute, second);
+        }
+
+        catch(DateTimeException dataT){
+            System.out.println(" в классе LocalDateTime в методе of - exception");
+        }
+        try{
+            LocalDate date3 = LocalDate.of(year1, month1, day1);
+        }
+        catch (DateTimeException data){
+            System.out.println(" в классе DateTime в методе of - exception");
+
+        }
+    }
+
+
+    private static LocalTime parseTime (String s)throws DateTimeParseException{//предупреждаем с помощью throws,
+        // что метод может выбросить исключение  DateTimeParseException
+        // НО обрабатывает эту ошибку метод который вызывает этот метод(метод main) у него для этого try и catch
+        // в строке 142-147
+       return LocalTime.parse(s);//возвращает дату и время созданную из String s
     }
 }

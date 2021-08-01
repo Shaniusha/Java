@@ -147,13 +147,15 @@ public class App {
             System.out.println("я обрабатываю ошибку которая в методе parseTime");
         }
                                        // д.з
+
         int year = 1940, month = 6, day = 21, hour = 6, minute = 0, second = 0;
 
-        try {// этот код может выбрасить исключение
+        try {// этот код может выкинуть исключение(ошибку)
             MyExc.my_LocalDateTime(year, month, day, hour, minute, second);//вызываю метод my_LocalDateTime,который
-            //находится в классе MyExc
+                                                                           //находится в классе MyExc
         }
-        catch(MyExc.YearExec e){//ловит исключение YearExe
+        catch(MyExc.YearExec e){//ловит исключение YearExe(КлассОшибки имяПеременной)
+            //обработка ошибки
             System.out.println("год меньше или равен 1940");
         }
         catch(MyExc.MonthExec e){
@@ -195,7 +197,6 @@ public class App {
 
         }
     }
-
 
     private static LocalTime parseTime (String s)throws DateTimeParseException{//предупреждаем с помощью throws,
         // что метод может выбросить исключение  DateTimeParseException

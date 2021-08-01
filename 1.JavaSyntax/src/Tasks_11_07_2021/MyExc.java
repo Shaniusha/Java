@@ -16,7 +16,7 @@ public final class MyExc {//final -это класс который нельзя
         public DayExec() {}// конструктор classa DayExec
     }
 
-    // это метод my_LocalDateTime , который throws(выбрасывает) исключение по имени classa YearExec
+    // это метод my_LocalDateTime , который throws(выбрасывает) исключение по имени classa YearExec,MonthExec,DayExec
     public static void my_LocalDateTime(int year, int month, int day, int hour, int minute, int second) throws YearExec, MonthExec, DayExec {
         if (year <= 2040)
             throw new YearExec();
@@ -36,6 +36,6 @@ public final class MyExc {//final -это класс который нельзя
         if ( day > 9)
             throw new DayExec();
 
-       LocalDate dateTime6 =LocalDate.of(year, month, day);
+       LocalDate dateTime6 = LocalDate.of(year, month, day);
     }
 }

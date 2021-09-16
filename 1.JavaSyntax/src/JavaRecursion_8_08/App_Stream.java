@@ -19,9 +19,11 @@ public class App_Stream {
         try {
             fos = new FileOutputStream(file);
             fos.write(bytes);//строка записывается в файл
-        } catch (FileNotFoundException e) {
+        } catch (FileNotFoundException e) {//файл не неайден
+            //FileNotFoundException является разновидностью(порожден от) IOException(родитель),поэтому мы сначало
+            // обрабатываем его,а потом уже IOException
             e.printStackTrace();
-        } catch (IOException e) {
+        } catch (IOException e) {//ошибка записи
             e.printStackTrace();
         } finally {
             try {
@@ -44,9 +46,9 @@ public class App_Stream {
 
                 System.out.print((char)bytes1[i]);
             }
-        } catch (FileNotFoundException e) {
+        } catch (FileNotFoundException e) {//файл не неайден
             e.printStackTrace();
-        } catch (IOException e) {
+        } catch (IOException e) {// ошибка чтения
             e.printStackTrace();
         } finally {
             try {

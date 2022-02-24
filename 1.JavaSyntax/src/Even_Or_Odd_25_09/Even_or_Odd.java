@@ -6,7 +6,7 @@ public class Even_or_Odd {
 //            return "Even";
 //        else
 //            return "Odd";
-        return number % 2 == 0?"Even":"Odd";
+        return number % 2 == 0 ? "Even" : "Odd";
     }
 
     public static void main(String[] args) {

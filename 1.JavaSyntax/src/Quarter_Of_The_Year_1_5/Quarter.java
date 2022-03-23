@@ -26,8 +26,8 @@ public class Quarter {
 
 
     public static void main(String[] args) {
-       System.out.println (quarterOf(8));
-
+        int X = quarterOf(8);
+       System.out.println (X);
     }
 }
 

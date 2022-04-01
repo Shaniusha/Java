@@ -79,8 +79,9 @@ public class Goods {// товары
         return measure;
     }
 
-    public String toString(){//описываем товар в виде строки 
-        return getName() + " " + String.valueOf(getCount()) + " " + getMeasure();
-        // наименование+кол-во+ед.измерения
+    public String toString(){//описываем товар в виде строки
+        return "name: " + getName() + ",\tprice: " + getPrice() +
+                ", \tcount: " + getCount() + ", \tmeasure: " + getMeasure();
+        // наименование+цена+кол-во+ед.измерения
     }
 }

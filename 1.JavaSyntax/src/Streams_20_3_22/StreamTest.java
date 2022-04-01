@@ -77,11 +77,17 @@ public class StreamTest {
         newList.stream().forEach
                 (st -> System.out.println(idx.getAndIncrement() + ") Название товара: " + st.getName()));
 
+        idx.set(1);//обнулить порядковый номер
+        //сортировка обЪектов по полю по цене
+        newList = stocks.stream().sorted(Comparator.comparing(Goods::getPrice)).collect(Collectors.toList());
+        newList.stream().forEach
+                (st -> System.out.println(idx.getAndIncrement() + ") Название товара: " + st.getPrice()));
+
+
         List<String> str = Arrays.asList("лимон", "яблоко", "груша", "слива", "хурма");
         List<String> newStr = str.stream().filter(st -> st.length() == 5).collect(Collectors.toList());
         newStr = str.stream().sorted().collect(Collectors.toList());//сортировка по алфавиту
         newStr.stream().forEach(System.out::println );//вывод на экран отсортированные фрукты
-//        newStr.stream().forEach(st -> newStr.stream().forEach(st));
 
 
         Optional<String> first = newStr.stream().findFirst();//найти первый эл-т в списке

@@ -66,22 +66,37 @@ public class StreamTest {
         List<Goods> newList = newStream.collect(Collectors.toList());//превращаем поток в список,
         // а можно еще в коллек-цию,множество и массив
         //все что написано сверху,только в одну строку
+
+        //  по ед.измер(getMeasure()) "кг"
         newList = stocks.stream().filter(stock -> stock.getMeasure().equals("кг")).collect(Collectors.toList());
+        System.out.println("  filter по ед.измер (measure(кг)) :");
+        newList.stream().forEach(System.out::println);
+        //по цене = 5f
+        newList = stocks.stream().filter(stock -> stock.getPrice().equals(5f)).collect(Collectors.toList());
+        System.out.println("  filter по цене (price = 5f) :");
+        newList.stream().forEach(System.out::println);
 
         //сортировка обЪектов по полю Name
+        //получим список по алфавиту
         newList = stocks.stream().sorted(Comparator.comparing(Goods::getName)).collect(Collectors.toList());
+        System.out.println("  сортировка обЪектов по полю Name :");
         newList.stream().forEach(System.out::println);
 
         // создаю обЪект для вычисленя порядкового номера
         AtomicInteger idx = new AtomicInteger(1);//начинаем с 1
+
+        System.out.println("  сортировка обЪектов по полю Name с порядковым номером ");
+        //порядковый номер + "Название товара" + товар
         newList.stream().forEach
                 (st -> System.out.println(idx.getAndIncrement() + ") Название товара: " + st.getName()));
 
         idx.set(1);//обнулить порядковый номер
         //сортировка обЪектов по полю по цене
         newList = stocks.stream().sorted(Comparator.comparing(Goods::getPrice)).collect(Collectors.toList());
+        System.out.println("  сортировка обЪектов по полю по цене");
         newList.stream().forEach
-                (st -> System.out.println(idx.getAndIncrement() + ") Название товара: " + st.getPrice()));
+                (st -> System.out.println(idx.getAndIncrement() + ") Название товара: " + st.getName()+
+                        " : цена: "+ st.getPrice()));
 
 
         List<String> str = Arrays.asList("лимон", "яблоко", "груша", "слива", "хурма");

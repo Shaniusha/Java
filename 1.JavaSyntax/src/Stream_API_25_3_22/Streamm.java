@@ -49,7 +49,6 @@ public class Streamm {
         //Было
         //у класса Arrays вызываем метод sort,это возможно сделать не создавая обЪект,т.к класс Arrays-static
         Arrays.sort(testStrings, new Comparator<String>() {
-
             //от меньшей длины String большей
             @Override
             public int compare(String s1, String s2) {//сравни первое слово со вторым
@@ -58,16 +57,33 @@ public class Streamm {
             }
         });
         //Стало
-        Arrays.sort(testStrings, (s1, s2) -> s1.length() - s2.length());//от меньшей длины String большей
+        Arrays.sort(testStrings,(s1,s2) -> s1.length() - s2.length());//от меньшей длины String большей
+
         System.out.println("сортировка по длине строк");
         Arrays.stream(testStrings).forEach(System.out::println);
         Arrays.sort(testStrings);//по алфавиту
         System.out.println("сортировка по алфавиту");
         Arrays.stream(testStrings).forEach(System.out::println);
+        //System.out.println();//sout+Tab (чтобы быстро напечатать)
 
         //
+        //Возможные способы создания Stream:
+//       - Пустой стрим: Stream.empty()
+//       - Стрим из List: list.stream()
+//       - Стрим из Map: map.entrySet().stream()
+//       - Стрим из массива: Arrays.stream(array)
+//       - Стрим из указанных элементов: Stream.of("1", "2", "3")
+//
+//        Операторы (по сути методы класса Stream)
+//        - Промежуточные (“intermediate”, ещё называют “lazy”) —
+//        поступающие элементы и возвращают стрим. Промежуточных операторов в цепочке обработки элементов может
+//        быть много.
+//        -
+//        Терминальные (“terminal”, ещё называют “eager”) — обрабатывают элементы и завершают работу стрима,
+//        так что терминальный оператор в цепочке может быть только один.
 
-        List<String> list = new ArrayList<String>();
+        List<String> list = new ArrayList<String>();//создаём список list;
+        //заполняем его тестовыми данными;
         list.add("One");
         list.add("Two");
         list.add("Three");
@@ -78,8 +94,20 @@ public class Streamm {
         list.add("Eight");
         list.add("Nine");
         list.add("Ten");
-        Stream stream = list.stream();
+        Stream stream = list.stream();//создаём обьект Stream;
+        //метод filter (фильтр) — промежуточный оператор, x приравнивается к одному элементу коллекции для перебора
+        // (как при for each) и после -> мы указываем как фильтруется наша коллекция и так как это промежуточный
+        // оператор, отфильтрованная коллекция идёт дальше в метод forEach который в свою очередь является
+        // терминальным (конечным) аналогом перебора for each
+        // (Выражение System.out::println сокращенно от: x-> System.out.println(x)),
+        // которое в свою очередь проходит по всем элементам переданной ему коллекции и выводит её)
         stream.filter(x-> x.toString().length() == 3).forEach(System.out::println);
+
+
+
+
+
+
 
     }
 

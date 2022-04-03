@@ -13,7 +13,7 @@ public class WithoutLambda {
         animals.add(new Animal("rabbit",true,false));
         animals.add(new Animal("turtle",false,true));
 
-//        ChecklfHopper check = new ChecklfHopper();
+//       ChecklfHopper check = new ChecklfHopper();
 //        print(animals,check);
         //это то что написано сверху в комментах,только мы создаем анонимный класс
         print(animals,new CheckIfHopper());   //если запись такая,то это анонимный класс и создаем его один раз

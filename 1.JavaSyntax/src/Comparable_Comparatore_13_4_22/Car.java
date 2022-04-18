@@ -36,6 +36,9 @@ public class Car implements Comparable<Car> {
         }
         return  1;//это если больше //можно поменять на -1
     }
+
+//    !!! Можно метод и по моделям,НО в Comparable можно ТОЛЬКО ОДИН метод
+
 //    public int compareTo1(Car car) {
 //        return model.compareTo(car.getModel());//по названию моделей(по алф)
 //    }

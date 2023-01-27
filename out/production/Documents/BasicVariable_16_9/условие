@@ -1,0 +1,8 @@
+This code should store "codewa.rs" as a variable called name but it's not working.
+ Can you figure out why?
+--------------------------------------------------------------
+Этот код должен хранить «codewa.rs» как переменную с именем name, но он не работает.
+ Вы можете понять почему?
+  public static String a == "code";
+  public static String b == "wa.rs";
+  public static String name == a + b;

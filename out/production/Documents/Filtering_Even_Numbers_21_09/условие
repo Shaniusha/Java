@@ -1,0 +1,9 @@
+Fix the bug in Filtering method
+The method is supposed to remove even numbers from the list and return a list that contains the odd numbers.
+
+However, there is a bug in the method that needs to be resolved.
+-------------------------------------
+Исправить ошибку в методе фильтрации
+Предполагается, что метод удаляет четные числа из списка и возвращает список, содержащий нечетные числа.
+
+Однако в методе есть ошибка, которую необходимо устранить.

@@ -45,7 +45,7 @@ public class Cat {
     }
 
     public static void main(String[] args) {
-        int y = 8;
+        int y = 20;
         int allYears[] = humanYearsCatYearsDogYears(y);
         for (int year: allYears)
             System.out.println(year);
